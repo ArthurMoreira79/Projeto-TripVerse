@@ -1,0 +1,562 @@
+
+/* =============================================
+   AGÊNCIA DE VIAGENS - ESTILOS PRINCIPAIS
+   ============================================= */
+
+/* --- VARIÁVEIS DE COR --- */
+:root {
+  --cor-primaria: #2c5f8a;       /* Azul principal (nav, destaques) */
+  --cor-secundaria: #e8a838;     /* Dourado/Laranja (botões, destaques) */
+  --cor-texto-escuro: #2d2d2d;   /* Texto principal */
+  --cor-texto-medio: #555555;    /* Texto secundário */
+  --cor-texto-claro: #ffffff;    /* Texto sobre fundos escuros */
+  --cor-fundo-servicos: #2d4a63; /* Fundo da seção de serviços */
+  --cor-linha: #2c5f8a;          /* Linha separadora header/body */
+  --cor-link: #5a9fd4;           /* Links em destaque no texto */
+  --fonte-principal: 'Georgia', serif;
+  --fonte-secundaria: 'Arial', sans-serif;
+}
+
+/* --- RESET BÁSICO --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-secundaria);
+  color: var(--cor-texto-escuro);
+  background-color: #ffffff;
+}
+
+/* --- HEADER ---*/
+
+header {
+  width: 100%;
+  position: relative;
+}
+
+/* --- Barra de navegação --- */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-bar .logo {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--cor-texto-escuro);
+  font-family: var(--fonte-principal);
+}
+
+.nav-bar nav a {
+  text-decoration: none;
+  color: var(--cor-texto-escuro);
+  font-size: 14px;
+  margin-left: 30px;
+}
+
+.nav-bar nav a:hover {
+  color: var(--cor-primaria);
+}
+
+.btn-contato-nav {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro) !important;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-contato-nav:hover {
+  background-color: #1e4a6e !important;
+}
+
+/* --- Hero com Bg --- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+  color: var(--cor-texto-claro);
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.hero-conteudo h1 {
+  font-family: var(--fonte-principal);
+  font-size: 42px;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.hero-conteudo h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 14px;
+}
+
+.hero-conteudo p {
+  font-size: 13px;
+  margin-bottom: 24px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  padding: 10px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-hero:hover {
+  background-color: #1e4a6e;
+}
+
+/* --- Linha que separa header e main --- */
+.linha-separadora {
+  width: 100%;
+  height: 4px;
+  background-color: var(--cor-linha);
+}
+
+/* --- MAIN ---*/
+
+/* --- Seção Bio ---*/
+
+.secao-biografia {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 30px;
+}
+
+.biografia-titulo {
+  text-align: center;
+  font-family: var(--fonte-principal);
+  font-size: 22px;
+  font-weight: normal;
+  color: #4a6a7c;
+  margin-bottom: 8px;
+}
+
+.biografia-titulo span {
+  font-weight: bold;
+}
+
+.biografia-subtitulo {
+  text-align: center;
+  font-size: 13px;
+  color: var(--cor-texto-medio);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.biografia-subtitulo a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Imagem Historia ---*/
+
+.galeria-historia {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.galeria-historia picture {
+  display: block;
+  width: 100%;
+}
+
+.galeria-historia img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Bloco como começou --- */
+.bloco-comecou {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.bloco-comecou picture {
+  flex-shrink: 0;
+  width: 200px;
+  height: 240px;
+  display: block;
+  overflow: hidden;
+}
+
+.bloco-comecou img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bloco-comecou-texto h3 {
+  font-family: var(--fonte-principal);
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 14px;
+  color: #4a6a7c;
+}
+
+.bloco-comecou-texto p {
+  font-size: 13px;
+  color: var(--cor-texto-medio);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.bloco-comecou-texto a {
+  color: var(--cor-link);
+  text-decoration: underline;
+}
+
+.bloco-comecou-texto strong {
+  font-weight: bold;
+}
+
+/* --- Seção Serviços ---*/
+
+.secao-servicos {
+  background-color: var(--cor-fundo-servicos);
+  padding: 50px 60px;
+  color: var(--cor-texto-claro);
+}
+
+.servicos-titulo {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.servicos-titulo .icone-estrela {
+  width: 28px;
+  height: 28px;
+  display: flex;
+}
+
+.servicos-titulo span {
+  font-weight: bold;
+}
+
+/* --- Grade de Serviços --- */
+.servicos-grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.servico-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.servico-icone {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servico-icone img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.servico-texto h4 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--cor-texto-claro);
+}
+
+.servico-texto p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+/* --- Seção Depoimentos ---*/
+
+.secao-depoimentos {
+  position: relative;
+  padding: 60px 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.depoimentos-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.depoimentos-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.82);
+  z-index: 1;
+}
+
+.depoimentos-conteudo {
+  position: relative;
+  z-index: 2;
+}
+
+.depoimentos-titulo {
+  font-size: 26px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.depoimentos-titulo .icone-depoimento {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.depoimentos-titulo .icone-depoimento img {
+  width: 28px;
+  height: 28px;
+}
+
+.depoimentos-titulo span {
+  font-weight: bold;
+}
+
+/* --- grade de Depoimentos --- */
+.depoimentos-grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.depoimento-card {
+  text-align: center;
+}
+
+.depoimento-foto {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.depoimento-foto-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 12px;
+}
+
+.depoimento-foto-wrap picture,
+.depoimento-foto-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.depoimento-nome {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: var(--cor-primaria);
+}
+
+.depoimento-viagens {
+  font-size: 12px;
+  color: var(--cor-texto-medio);
+  margin-bottom: 10px;
+}
+
+.depoimento-texto {
+  font-size: 12px;
+  color: var(--cor-texto-medio);
+  line-height: 1.6;
+  font-style: italic;
+  text-align: left;
+}
+
+/* --- Footer ---*/
+
+footer {
+  background-color: #f2f2f2;
+  border-top: 1px solid #ddd;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 13px;
+  color: var(--cor-texto-medio);
+}
+
+.btn-contato-footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-contato-footer:hover {
+  background-color: #1e4a6e;
+}
+
+/* -- Responsividade ---*/
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-bar nav a {
+    margin-left: 14px;
+    font-size: 12px;
+  }
+
+  .hero {
+    height: 320px;
+  }
+
+  .hero-conteudo h1 {
+    font-size: 28px;
+  }
+
+  .secao-biografia {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .bloco-comecou {
+    flex-direction: column;
+  }
+
+  .bloco-comecou picture{
+    width: 100%;
+    height: 280px;
+  }
+
+  .bloco-comecou img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .secao-servicos {
+    padding: 40px 20px;
+  }
+
+  .servicos-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-depoimentos {
+    padding: 40px 20px;
+  }
+
+  .depoimentos-grade {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 260px;
+  }
+
+  .hero-conteudo h1 {
+    font-size: 22px;
+  }
+
+  .nav-bar nav {
+    display: none;
+  }
+}

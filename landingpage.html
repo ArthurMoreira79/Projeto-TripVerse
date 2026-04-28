@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência de Viagens</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <!--Header-->
+  <header>
+
+    <!-- Barra de Navegação -->
+    <div class="nav-bar">
+      <span class="logo">Realizando Sonhos</span>
+      <nav>
+        <a href="#biografia">Nossa História</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#depoimentos">Testemunhas</a>
+        <a href="#contato" class="btn-contato-nav">Entre em Contato</a>
+      </nav>
+    </div>
+
+    <!-- Background e Overlay -->
+    <div class="hero">
+      <picture>
+        <source media="(max-width: 480px)" srcset="imagens-da-pagina/paisagem--small-hi-dpi.jpg">
+        <source media="(max-width: 768px)" srcset="imagens-da-pagina/paisagem--medium-hi-dpi.jpg">
+        <img class="hero-bg" src="imagens-da-pagina/paisagem--large-hi-dpi.jpg" alt="Paisagem Background">
+      </picture>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-conteudo">
+        <h1>Viagens Incríveis</h1>
+        <h2>Uma experiência única.</h2>
+        <p>
+          Proporcionamos momentos incríveis<br />
+          que sempre você irá lembrar.
+        </p>
+        <a href="#contato" class="btn-hero">Comece hoje</a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Linha que separa o header e body -->
+  <div class="linha-separadora"></div>
+
+  <!-- Body -->
+  <main>
+
+    <!-- Nossa História -->
+    <section id="biografia" class="secao-biografia">
+
+      <h2 class="biografia-titulo">
+        A primeira viagem que planejamos <span>foi a nossa</span>
+      </h2>
+      <p class="biografia-subtitulo">
+        Desde então, proporcionamos a melhor<br />
+        experiência de <a href="#">viagens para todos</a>
+      </p>
+
+      <div class="galeria-historia">
+        <picture>
+          <img src="imagens-da-pagina/primeira-viagem.jpg" alt="Primeira Viagem">
+        </picture>
+      </div>
+
+      <div class="bloco-comecou">
+
+        <picture>
+          <source media="(max-width: 768px)" srcset="imagens-da-pagina/como-comecou-landscape.jpg" class="" />
+          <img src="imagens-da-pagina/como-comecou.jpg" alt="Mulher">
+        </picture>
+
+        <div class="bloco-comecou-texto">
+          <h3>Veja como tudo começou ...</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Duis aute irure dolor in <strong>reprehenderit</strong> in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum, vitae vel esse cillum <strong>dolore eu fugiat.</strong>
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Serviços -->
+    <section id="servicos" class="secao-servicos">
+
+      <h2 class="servicos-titulo">
+
+        <span class="icone-estrela">
+          <img src="imagens-da-pagina/icons/star.svg" alt="Estrela" />
+        </span>
+        Nossos <span>Serviços</span>
+      </h2>
+
+      <div class="servicos-grade">
+
+        <div class="servico-item">
+          <div class="servico-icone">
+
+            <img src="imagens-da-pagina/icons/rain.svg" alt="Ícone previsão do tempo" />
+          </div>
+          <div class="servico-texto">
+            <h4>Veja a previsão do tempo</h4>
+            <p>
+              Baixe nosso aplicativo e vamos enviar-lhe um aviso se está prestes a chover
+              nos próximos 20 minutos em torno de sua localização atual. Uma boa chuva
+              pode ser refrescante, mas às vezes você só quer ficar bem abrigado.
+            </p>
+          </div>
+        </div>
+
+        <div class="servico-item">
+          <div class="servico-icone">
+
+            <img src="imagens-da-pagina/icons/wifi.svg" alt="Ícone Wi-Fi" />
+          </div>
+          <div class="servico-texto">
+            <h4>Wi-Fi Zone</h4>
+            <p>
+              Nós planejamos viagens para lugares que você possa pessoalmente afestar como sendo
+              incrível. O que significa que temos mapeados os locais com Wi-fi disponível. Também
+              disponibilizamos um mapa com todas as informações.
+            </p>
+          </div>
+        </div>
+
+        <div class="servico-item">
+          <div class="servico-icone">
+
+            <img src="imagens-da-pagina/icons/globe.svg" alt="Ícone guia" />
+          </div>
+          <div class="servico-texto">
+            <h4>Guia Incrível</h4>
+            <p>
+              Nós percorremos todo os cantos do planeta para as melhores destinos e
+              belas paisagens. Se há um canto do mundo você que fuja, nós conhecemos
+              os locais mais belos e inspiradores.
+            </p>
+          </div>
+        </div>
+
+        <div class="servico-item">
+          <div class="servico-icone">
+
+            <img src="imagens-da-pagina/icons/fire.svg" alt="Ícone kit sobrevivência" />
+          </div>
+          <div class="servico-texto">
+            <h4>Kit de sobrevivência</h4>
+            <p>
+              Toda vez que você fizer uma reserva lhe enviamos um kit de sobrevivência com os
+              melhores materiais. O kit permitirá que você monte uma tenda, iniciar um fogueiro, e até
+              como pagar menos impostos.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =Depoimentos -->
+    <section id="depoimentos" class="secao-depoimentos">
+
+      <picture>
+        <img class="depoimentos-bg" src="imagens-da-pagina/testemunha-bg.jpg" alt="background">
+      </picture>
+
+      <div class="depoimentos-overlay"></div>
+
+      <div class="depoimentos-conteudo">
+
+        <h2 class="depoimentos-titulo">
+
+          <span class="icone-depoimento">
+            <img src="imagens-da-pagina/icons/comment.svg" alt="Ícone depoimentos" />
+          </span>
+          <span>Depoimentos</span> Reais
+        </h2>
+
+        <div class="depoimentos-grade">
+
+          <div class="depoimento-card">
+            <div class="depoimento-foto-wrap">
+
+              <picture>
+                <img src="imagens-da-pagina/testemunha-renata-hi-dpi.jpg" alt="">
+              </picture>
+            </div>
+            <p class="depoimento-nome">Renata Vasconcelos</p>
+            <p class="depoimento-viagens">5 Viagens</p>
+            <p class="depoimento-texto">
+              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut."
+            </p>
+          </div>
+
+          <div class="depoimento-card">
+            <div class="depoimento-foto-wrap">
+
+              <picture>
+                <img src="imagens-da-pagina/testemunha-joao-hi-dpi.jpg" alt="João Pedro" />
+              </picture>
+            </div>
+            <p class="depoimento-nome">João Pedro</p>
+            <p class="depoimento-viagens">4 Viagens</p>
+            <p class="depoimento-texto">
+              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur."
+            </p>
+          </div>
+          <div class="depoimento-card">
+            <div class="depoimento-foto-wrap">
+
+              <picture>
+                <img src="imagens-da-pagina/testemunha-cat-hi-dpi.jpg" alt="Gata Mimí" />
+              </picture>
+            </div>
+            <p class="depoimento-nome">Gata Mimí</p>
+            <p class="depoimento-viagens">3 Viagens</p>
+            <p class="depoimento-texto">
+              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut."
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+
+  <footer id="contato">
+    <p>Copyright &copy; 2017 Todos os direitos reservados.</p>
+    <a href="#contato" class="btn-contato-footer">Entre em Contato</a>
+  </footer>
+
+</body>
+</html>
