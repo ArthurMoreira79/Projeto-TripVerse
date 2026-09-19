@@ -3,270 +3,333 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agência de Viagens</title>
+  <title>TripVerse — Roteiros que viram histórias</title>
+  <meta name="description" content="TripVerse planeja roteiros de viagem sob medida para quem quer viver os lugares de perto, não só ver fotos deles." />
+  <link rel="icon" type="image/png" href="imagens/tripverse-marca.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,560;1,9..144,420&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
 
-  <!--Header-->
-  <header>
+  <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
 
-    <!-- Barra de Navegação -->
+  <div class="progresso-scroll" id="progresso-scroll" aria-hidden="true"></div>
+
+  <!-- Header / Nav -->
+  <header class="topo" id="topo">
     <div class="nav-bar">
-      <span class="logo">Realizando Sonhos</span>
-      <nav>
-        <a href="#biografia">Nossa História</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#depoimentos">Testemunhas</a>
-        <a href="#contato" class="btn-contato-nav">Entre em Contato</a>
+      <a href="#inicio" class="logo">TripVerse<span>.</span></a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#inicio">Início</a>
+        <a href="#roteiros">Roteiros</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#paisagens">Paisagens</a>
+        <a href="#contato" class="btn-nav">Fale com a gente</a>
       </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-
-    <!-- Background e Overlay -->
-    <div class="hero">
-      <picture>
-        <source media="(max-width: 480px)" srcset="imagens-da-pagina/paisagem--small-hi-dpi.jpg">
-        <source media="(max-width: 768px)" srcset="imagens-da-pagina/paisagem--medium-hi-dpi.jpg">
-        <img class="hero-bg" src="imagens-da-pagina/paisagem--large-hi-dpi.jpg" alt="Paisagem Background">
-      </picture>
-
-      <div class="hero-overlay"></div>
-
-      <div class="hero-conteudo">
-        <h1>Viagens Incríveis</h1>
-        <h2>Uma experiência única.</h2>
-        <p>
-          Proporcionamos momentos incríveis<br />
-          que sempre você irá lembrar.
-        </p>
-        <a href="#contato" class="btn-hero">Comece hoje</a>
-      </div>
-
-    </div>
-
   </header>
 
-  <!-- Linha que separa o header e body -->
-  <div class="linha-separadora"></div>
+  <main id="conteudo-principal">
 
-  <!-- Body -->
-  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <video class="hero-bg" autoplay muted loop playsinline poster="imagens/landscapes/posters/landscapevc03-poster.jpg">
+        <source src="imagens/landscapes/landscapevc03.mp4" type="video/mp4">
+      </video>
+      <div class="hero-veu"></div>
 
-    <!-- Nossa História -->
-    <section id="biografia" class="secao-biografia">
-
-      <h2 class="biografia-titulo">
-        A primeira viagem que planejamos <span>foi a nossa</span>
-      </h2>
-      <p class="biografia-subtitulo">
-        Desde então, proporcionamos a melhor<br />
-        experiência de <a href="#">viagens para todos</a>
-      </p>
-
-      <div class="galeria-historia">
-        <picture>
-          <img src="imagens-da-pagina/primeira-viagem.jpg" alt="Primeira Viagem">
-        </picture>
-      </div>
-
-      <div class="bloco-comecou">
-
-        <picture>
-          <source media="(max-width: 768px)" srcset="imagens-da-pagina/como-comecou-landscape.jpg" class="" />
-          <img src="imagens-da-pagina/como-comecou.jpg" alt="Mulher">
-        </picture>
-
-        <div class="bloco-comecou-texto">
-          <h3>Veja como tudo começou ...</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Duis aute irure dolor in <strong>reprehenderit</strong> in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum, vitae vel esse cillum <strong>dolore eu fugiat.</strong>
-          </p>
+      <div class="hero-conteudo">
+        <img src="imagens/tripverse-marca.png" alt="" class="hero-marca" width="72" height="72">
+        <p class="hero-rotulo">Roteiros guiados para grupos pequenos</p>
+        <h1 class="hero-titulo">O mundo tem mais páginas<br>do que dá pra ver de fotos.</h1>
+        <p class="hero-texto">
+          A TripVerse desenha viagens para quem quer sentir o lugar antes de fotografá-lo —
+          com guias locais, horários que fogem da multidão e roteiro sempre pronto para mudar
+          de ideia. Hoje já levamos gente
+          <span class="hero-destinos">para todo lugar do mundo</span>.
+        </p>
+        <div class="hero-acoes">
+          <a href="#roteiros" class="btn-primario">Ver roteiros</a>
+          <a href="#avaliacoes" class="link-secundario">Ler relatos de quem foi</a>
         </div>
-
       </div>
 
+      <a href="#roteiros" class="hero-scroll" aria-label="Rolar para os roteiros">
+        <span></span>
+      </a>
     </section>
 
-
-    <!-- Serviços -->
-    <section id="servicos" class="secao-servicos">
-
-      <h2 class="servicos-titulo">
-
-        <span class="icone-estrela">
-          <img src="imagens-da-pagina/icons/star.svg" alt="Estrela" />
-        </span>
-        Nossos <span>Serviços</span>
-      </h2>
-
-      <div class="servicos-grade">
-
-        <div class="servico-item">
-          <div class="servico-icone">
-
-            <img src="imagens-da-pagina/icons/rain.svg" alt="Ícone previsão do tempo" />
-          </div>
-          <div class="servico-texto">
-            <h4>Veja a previsão do tempo</h4>
-            <p>
-              Baixe nosso aplicativo e vamos enviar-lhe um aviso se está prestes a chover
-              nos próximos 20 minutos em torno de sua localização atual. Uma boa chuva
-              pode ser refrescante, mas às vezes você só quer ficar bem abrigado.
-            </p>
-          </div>
-        </div>
-
-        <div class="servico-item">
-          <div class="servico-icone">
-
-            <img src="imagens-da-pagina/icons/wifi.svg" alt="Ícone Wi-Fi" />
-          </div>
-          <div class="servico-texto">
-            <h4>Wi-Fi Zone</h4>
-            <p>
-              Nós planejamos viagens para lugares que você possa pessoalmente afestar como sendo
-              incrível. O que significa que temos mapeados os locais com Wi-fi disponível. Também
-              disponibilizamos um mapa com todas as informações.
-            </p>
-          </div>
-        </div>
-
-        <div class="servico-item">
-          <div class="servico-icone">
-
-            <img src="imagens-da-pagina/icons/globe.svg" alt="Ícone guia" />
-          </div>
-          <div class="servico-texto">
-            <h4>Guia Incrível</h4>
-            <p>
-              Nós percorremos todo os cantos do planeta para as melhores destinos e
-              belas paisagens. Se há um canto do mundo você que fuja, nós conhecemos
-              os locais mais belos e inspiradores.
-            </p>
-          </div>
-        </div>
-
-        <div class="servico-item">
-          <div class="servico-icone">
-
-            <img src="imagens-da-pagina/icons/fire.svg" alt="Ícone kit sobrevivência" />
-          </div>
-          <div class="servico-texto">
-            <h4>Kit de sobrevivência</h4>
-            <p>
-              Toda vez que você fizer uma reserva lhe enviamos um kit de sobrevivência com os
-              melhores materiais. O kit permitirá que você monte uma tenda, iniciar um fogueiro, e até
-              como pagar menos impostos.
-            </p>
-          </div>
-        </div>
-
+    <!-- Roteiros / Popular Tours -->
+    <section class="roteiros" id="roteiros">
+      <div class="secao-cabecalho">
+        <h2>Roteiros mais procurados</h2>
+        <p>Quatro caminhos para começar. Escolha um bloco para conhecer os detalhes do roteiro.</p>
       </div>
 
+      <div class="roteiros-grade" id="roteiros-grade">
+
+        <button class="roteiro-card" data-roteiro="roma" aria-haspopup="dialog">
+          <img src="imagens/tours/ColosseumRomaTour.jpg" alt="" loading="lazy">
+          <div class="roteiro-card-veu"></div>
+          <div class="roteiro-card-texto">
+            <span class="roteiro-local">Itália</span>
+            <h3>Roma</h3>
+            <span class="roteiro-abrir">Ver roteiro</span>
+          </div>
+        </button>
+
+        <button class="roteiro-card" data-roteiro="estocolmo" aria-haspopup="dialog">
+          <img src="imagens/tours/EstocolmoSueciaTour.jpg" alt="" loading="lazy">
+          <div class="roteiro-card-veu"></div>
+          <div class="roteiro-card-texto">
+            <span class="roteiro-local">Suécia</span>
+            <h3>Estocolmo</h3>
+            <span class="roteiro-abrir">Ver roteiro</span>
+          </div>
+        </button>
+
+        <button class="roteiro-card" data-roteiro="paris" aria-haspopup="dialog">
+          <img src="imagens/tours/ParisFrancaTour.jpg" alt="" loading="lazy">
+          <div class="roteiro-card-veu"></div>
+          <div class="roteiro-card-texto">
+            <span class="roteiro-local">França</span>
+            <h3>Paris</h3>
+            <span class="roteiro-abrir">Ver roteiro</span>
+          </div>
+        </button>
+
+        <button class="roteiro-card" data-roteiro="rio" aria-haspopup="dialog">
+          <img src="imagens/tours/RioBrasilTour.jpg" alt="" loading="lazy">
+          <div class="roteiro-card-veu"></div>
+          <div class="roteiro-card-texto">
+            <span class="roteiro-local">Brasil</span>
+            <h3>Rio de Janeiro</h3>
+            <span class="roteiro-abrir">Ver roteiro</span>
+          </div>
+        </button>
+
+      </div>
     </section>
 
-
-    <!-- =Depoimentos -->
-    <section id="depoimentos" class="secao-depoimentos">
-
-      <picture>
-        <img class="depoimentos-bg" src="imagens-da-pagina/testemunha-bg.jpg" alt="background">
-      </picture>
-
-      <div class="depoimentos-overlay"></div>
-
-      <div class="depoimentos-conteudo">
-
-        <h2 class="depoimentos-titulo">
-
-          <span class="icone-depoimento">
-            <img src="imagens-da-pagina/icons/comment.svg" alt="Ícone depoimentos" />
-          </span>
-          <span>Depoimentos</span> Reais
-        </h2>
-
-        <div class="depoimentos-grade">
-
-          <div class="depoimento-card">
-            <div class="depoimento-foto-wrap">
-
-              <picture>
-                <img src="imagens-da-pagina/testemunha-renata-hi-dpi.jpg" alt="">
-              </picture>
-            </div>
-            <p class="depoimento-nome">Renata Vasconcelos</p>
-            <p class="depoimento-viagens">5 Viagens</p>
-            <p class="depoimento-texto">
-              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut."
-            </p>
-          </div>
-
-          <div class="depoimento-card">
-            <div class="depoimento-foto-wrap">
-
-              <picture>
-                <img src="imagens-da-pagina/testemunha-joao-hi-dpi.jpg" alt="João Pedro" />
-              </picture>
-            </div>
-            <p class="depoimento-nome">João Pedro</p>
-            <p class="depoimento-viagens">4 Viagens</p>
-            <p class="depoimento-texto">
-              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur."
-            </p>
-          </div>
-          <div class="depoimento-card">
-            <div class="depoimento-foto-wrap">
-
-              <picture>
-                <img src="imagens-da-pagina/testemunha-cat-hi-dpi.jpg" alt="Gata Mimí" />
-              </picture>
-            </div>
-            <p class="depoimento-nome">Gata Mimí</p>
-            <p class="depoimento-viagens">3 Viagens</p>
-            <p class="depoimento-texto">
-              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut."
-            </p>
-          </div>
-
-        </div>
-
+    <!-- Avaliações -->
+    <section class="avaliacoes" id="avaliacoes">
+      <div class="secao-cabecalho">
+        <h2>Quem viajou, conta</h2>
+        <p>Relatos de clientes que já fecharam a mala com a gente.</p>
       </div>
 
+      <div class="avaliacoes-grade">
+
+        <figure class="avaliacao-card">
+          <img src="imagens/testemunhas/testemunha-renata-hi-dpi.jpg" alt="Renata Vasconcelos" class="avaliacao-foto">
+          <blockquote>
+            "Cheguei em Estocolmo sem saber dizer nem 'obrigada' em sueco e saí de lá com um mapa
+            mental de cada ilha do arquipélago. A TripVerse resolvia qualquer imprevisto antes
+            de eu perceber que ele tinha existido."
+          </blockquote>
+          <figcaption>
+            <span class="avaliacao-nome">Renata Vasconcelos</span>
+            <span class="avaliacao-info">5 viagens com a TripVerse</span>
+          </figcaption>
+        </figure>
+
+        <figure class="avaliacao-card">
+          <img src="imagens/testemunhas/testemunha-joao-hi-dpi.jpg" alt="João Pedro" class="avaliacao-foto">
+          <blockquote>
+            "O guia nos tirou da fila às 6h da manhã e vimos o sol nascer sozinhos dentro do
+            Coliseu, sem uma alma além da gente e dos gatos de Roma. Depois disso, qualquer
+            outra viagem de turista vira só passeio."
+          </blockquote>
+          <figcaption>
+            <span class="avaliacao-nome">João Pedro</span>
+            <span class="avaliacao-info">4 viagens com a TripVerse</span>
+          </figcaption>
+        </figure>
+
+        <figure class="avaliacao-card">
+          <img src="imagens/testemunhas/testemunha-cat-hi-dpi.jpg" alt="Gata Mimí" class="avaliacao-foto">
+          <blockquote>
+            "Viajei dentro do bolso da mala e ronronei o caminho inteiro até Paris. Recomendo
+            os hotéis que aceitam bagagem felina e reclamo formalmente da falta de pombos
+            no topo da Torre Eiffel."
+          </blockquote>
+          <figcaption>
+            <span class="avaliacao-nome">Gata Mimí</span>
+            <span class="avaliacao-info">3 viagens (a bordo da bagagem)</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- Paisagens -->
+    <section class="paisagens" id="paisagens">
+      <div class="secao-cabecalho secao-cabecalho--claro">
+        <h2>Paisagens registradas pelo caminho</h2>
+        <p>Fotos e vídeos enviados por quem já viajou com a gente — lugares que só existem
+          de verdade quando você está diante deles.</p>
+      </div>
+
+      <div class="paisagens-grade" id="paisagens-grade">
+
+        <button class="paisagem-item paisagem-item--foto" data-tipo="foto" data-src="imagens/landscapes/landscape01.webp">
+          <img src="imagens/landscapes/landscape01.webp" alt="Estrada entre montanhas nevadas" loading="lazy">
+        </button>
+
+        <button class="paisagem-item paisagem-item--video" data-tipo="video" data-src="imagens/landscapes/landscapevd01.mp4">
+          <video muted playsinline preload="none" poster="imagens/landscapes/posters/landscapevsd01-poster.jpg"></video>
+          <span class="paisagem-play" aria-hidden="true"></span>
+        </button>
+
+        <button class="paisagem-item paisagem-item--foto" data-tipo="foto" data-src="imagens/landscapes/landscape02.webp">
+          <img src="imagens/landscapes/landscape02.webp" alt="Paisagem natural ao entardecer" loading="lazy">
+        </button>
+
+        <button class="paisagem-item paisagem-item--video" data-tipo="video" data-src="imagens/landscapes/landscapevd08.mp4">
+          <video muted playsinline preload="none" poster="imagens/landscapes/posters/landscapevd08-poster.jpg"></video>
+          <span class="paisagem-play" aria-hidden="true"></span>
+        </button>
+
+        <button class="paisagem-item paisagem-item--video" data-tipo="video" data-src="imagens/landscapes/landscapevd06.mp4">
+          <video muted playsinline preload="none" poster="imagens/landscapes/posters/landscapevd06-poster.jpg"></video>
+          <span class="paisagem-play" aria-hidden="true"></span>
+        </button>
+
+        <button class="paisagem-item paisagem-item--foto" data-tipo="foto" data-src="imagens/landscapes/landscape03.webp">
+          <img src="imagens/landscapes/landscape03.webp" alt="Vista de paisagem natural" loading="lazy">
+        </button>
+
+        <button class="paisagem-item paisagem-item--video" data-tipo="video" data-src="imagens/landscapes/landscape07.mp4">
+          <video muted playsinline preload="none" poster="imagens/landscapes/posters/landscape07-poster.jpg"></video>
+          <span class="paisagem-play" aria-hidden="true"></span>
+        </button>
+
+        <button class="paisagem-item paisagem-item--video" data-tipo="video" data-src="imagens/landscapes/landscapevd09.mp4">
+          <video muted playsinline preload="none" poster="imagens/landscapes/posters/landscapevd09-poster.jpg"></video>
+          <span class="paisagem-play" aria-hidden="true"></span>
+        </button>
+
+        <button class="paisagem-item paisagem-item--foto" data-tipo="foto" data-src="imagens/landscapes/landscape04.webp">
+          <img src="imagens/landscapes/landscape04.webp" alt="Paisagem natural" loading="lazy">
+        </button>
+
+        <button class="paisagem-item paisagem-item--video" data-tipo="video" data-src="imagens/landscapes/landscapevd05.mp4">
+          <video muted playsinline preload="none" poster="imagens/landscapes/posters/landscapevd05-poster.jpg"></video>
+          <span class="paisagem-play" aria-hidden="true"></span>
+        </button>
+
+        <button class="paisagem-item paisagem-item--foto" data-tipo="foto" data-src="imagens/landscapes/landscape05.jpg">
+          <img src="imagens/landscapes/landscape05.jpg" alt="Vista aérea de praia com dunas" loading="lazy">
+        </button>
+
+      </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-
   <footer id="contato">
-    <p>Copyright &copy; 2017 Todos os direitos reservados.</p>
-    <a href="#contato" class="btn-contato-footer">Entre em Contato</a>
+    <div class="rodape-principal">
+
+      <div class="rodape-marca">
+        <p class="logo rodape-logo">TripVerse<span>.</span></p>
+        <p>Roteiros pensados por gente que viaja de verdade, para gente que quer viver
+          cada lugar de perto.</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>Contato</h4>
+        <a href="mailto:contato@tripverse.com.br">contato@tripverse.com.br</a>
+        <a href="tel:+551140028922">+55 (11) 4002-8922</a>
+        <p>São Paulo, Brasil</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>Site</h4>
+        <a href="#roteiros">Roteiros</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#paisagens">Paisagens</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h4>Siga a TripVerse</h4>
+        <div class="rodape-redes">
+          <a href="#" aria-label="Instagram da TripVerse">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook da TripVerse">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 21v-8h3l.5-4H14V6.5c0-1.15.32-1.9 2-1.9H17.5V1.1C17.2 1.06 16.15 1 14.9 1 12.3 1 10.5 2.58 10.5 5.5V9H7.5v4h3v8h3.5Z"/></svg>
+          </a>
+          <a href="#" aria-label="X (Twitter) da TripVerse">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 4 16 16M20 4 4 20"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube da TripVerse">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="6" width="19" height="12" rx="4"/><path d="M10.5 9.5v5l4.5-2.5Z" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="rodape-base">
+      <p>© <span id="ano-atual">2026</span> TripVerse. Todos os direitos reservados.</p>
+      <p>Site criado por <a href="https://github.com/ArthurMoreira79" target="_blank" rel="noopener">Arthur Moreira</a></p>
+    </div>
   </footer>
 
+  <!-- Painel lateral de roteiro -->
+  <div class="painel-overlay" id="painel-overlay" hidden></div>
+  <aside class="painel-roteiro" id="painel-roteiro" role="dialog" aria-modal="true" aria-labelledby="painel-titulo" hidden>
+    <button class="painel-fechar" id="painel-fechar" aria-label="Fechar detalhes do roteiro">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 5 14 14M19 5 5 19"/></svg>
+    </button>
+
+    <div class="painel-imagem">
+      <img id="painel-imagem" src="" alt="">
+    </div>
+
+    <div class="painel-corpo">
+      <span class="painel-local" id="painel-local"></span>
+      <h3 id="painel-titulo"></h3>
+      <p class="painel-subtitulo" id="painel-subtitulo"></p>
+
+      <dl class="painel-fatos">
+        <div>
+          <dt>Duração sugerida</dt>
+          <dd id="painel-duracao"></dd>
+        </div>
+        <div>
+          <dt>Melhor época</dt>
+          <dd id="painel-epoca"></dd>
+        </div>
+      </dl>
+
+      <p class="painel-descricao" id="painel-descricao"></p>
+
+      <h4>O que você vai viver</h4>
+      <ul class="painel-destaques" id="painel-destaques"></ul>
+
+      <a href="#contato" class="btn-primario painel-cta">Perguntar sobre esse roteiro</a>
+    </div>
+  </aside>
+
+  <!-- Lightbox de paisagens -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-fechar" id="lightbox-fechar" aria-label="Fechar imagem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 5 14 14M19 5 5 19"/></svg>
+    </button>
+    <div class="lightbox-conteudo" id="lightbox-conteudo"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
