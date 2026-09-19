@@ -2,7 +2,7 @@
 
 Site de uma agência de viagens fictícia, com roteiros guiados para grupos pequenos. Acesse o link abaixo para dar uma olhada!
 
-https://arthurmoreira79.github.io/Projeto-TripVerse/
+https://projeto-tripverse.vercel.app/
 
 ## O que tem na página
 
