@@ -360,15 +360,94 @@ ul { list-style: none; }
 .roteiros {
   background-color: var(--ink);
   padding: 110px 32px;
-  /* os cartões do leque que saem pelas laterais não podem criar rolagem horizontal */
-  overflow-x: clip;
 }
 
-.roteiros-leque {
+.roteiros-grade {
   max-width: var(--largura-max);
-  margin: 24px auto 0;
-  --cf-title-font: var(--fonte-titulo);
-  --cf-accent: var(--gold);
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  height: 560px;
+}
+
+.roteiro-card {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border-radius: var(--raio);
+  overflow: hidden;
+  text-align: left;
+  transition: flex-grow 750ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.roteiro-card:hover,
+.roteiro-card:focus-visible {
+  flex-grow: 2.4;
+}
+
+.roteiro-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+  transition: transform 900ms cubic-bezier(0.19, 1, 0.22, 1), filter 750ms ease;
+  filter: saturate(0.94) brightness(0.9);
+}
+
+.roteiro-card:hover img,
+.roteiro-card:focus-visible img {
+  transform: scale(1.1);
+  filter: saturate(1.05) brightness(1);
+}
+
+.roteiro-card-veu {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(11, 18, 15, 0.88) 0%, rgba(11, 18, 15, 0.15) 55%, rgba(11, 18, 15, 0.05) 100%);
+}
+
+.roteiro-card-texto {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 26px 22px;
+  color: var(--text-light);
+}
+
+.roteiro-local {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.roteiro-card-texto h3 {
+  font-family: var(--fonte-titulo);
+  font-weight: 480;
+  font-size: 1.55rem;
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.roteiro-abrir {
+  display: inline-block;
+  font-size: 0.84rem;
+  color: var(--text-light-soft);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--transicao), transform var(--transicao);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+}
+
+.roteiro-card:hover .roteiro-abrir,
+.roteiro-card:focus-visible .roteiro-abrir {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* =============================================
@@ -825,6 +904,7 @@ body.travado { overflow: hidden; }
    ============================================= */
 
 @media (max-width: 1080px) {
+  .roteiros-grade { height: 480px; }
   .avaliacoes-grade { grid-template-columns: 1fr 1fr; }
   .rodape-principal { grid-template-columns: 1fr 1fr; }
 }
@@ -855,6 +935,10 @@ body.travado { overflow: hidden; }
   .menu-toggle { display: flex; }
 
   .roteiros { padding: 80px 24px; }
+  .roteiros-grade { flex-direction: column; height: auto; }
+  .roteiro-card { flex: 0 0 220px; height: 220px; }
+  .roteiro-card img { transform: scale(1); }
+  .roteiro-card:hover img, .roteiro-card:focus-visible img { transform: scale(1.05); }
 
   .avaliacoes { padding: 80px 24px; }
   .avaliacoes-grade { grid-template-columns: 1fr; gap: 24px; }
