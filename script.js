@@ -181,11 +181,24 @@
     if (ultimoFoco) ultimoFoco.focus();
   }
 
-  document.querySelectorAll('.roteiro-card').forEach(function (card) {
-    card.addEventListener('click', function () {
-      abrirPainel(card.getAttribute('data-roteiro'));
+  /* --- Roteiros em leque (Card Fan Carousel): um cartão por roteiro, o clique abre o painel --- */
+  var elLeque = document.getElementById('roteiros-leque');
+  if (elLeque && window.CardFanCarousel) {
+    window.CardFanCarousel(elLeque, {
+      theme: 'dark',
+      cards: ['roma', 'estocolmo', 'paris', 'rio'].map(function (chave) {
+        var dados = roteiros[chave];
+        return {
+          imgUrl: dados.imagem,
+          alt: dados.titulo + ', ' + dados.local,
+          eyebrow: dados.local,
+          title: dados.titulo,
+          cta: 'Ver roteiro',
+          onClick: function () { abrirPainel(chave); }
+        };
+      })
     });
-  });
+  }
 
   painelFechar.addEventListener('click', fecharPainel);
   painelOverlay.addEventListener('click', fecharPainel);

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tripverse",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["C:\\Users\\Arthur\\AppData\\Local\\Temp\\claude\\d91bda857ebc57cb\\d8c25284-1665-4abe-8c84-eed2d5c42e58\\scratchpad\\serve.js", "."],
+      "port": 5500
+    }
+  ]
+}

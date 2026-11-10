@@ -68,52 +68,11 @@
     <section class="roteiros" id="roteiros">
       <div class="secao-cabecalho">
         <h2>Roteiros mais procurados</h2>
-        <p>Quatro caminhos para começar. Escolha um bloco para conhecer os detalhes do roteiro.</p>
+        <p>Quatro caminhos para começar. Escolha um cartão para conhecer os detalhes do roteiro.</p>
       </div>
 
-      <div class="roteiros-grade" id="roteiros-grade">
-
-        <button class="roteiro-card" data-roteiro="roma" aria-haspopup="dialog">
-          <img src="imagens/tours/ColosseumRomaTour.jpg" alt="" loading="lazy">
-          <div class="roteiro-card-veu"></div>
-          <div class="roteiro-card-texto">
-            <span class="roteiro-local">Itália</span>
-            <h3>Roma</h3>
-            <span class="roteiro-abrir">Ver roteiro</span>
-          </div>
-        </button>
-
-        <button class="roteiro-card" data-roteiro="estocolmo" aria-haspopup="dialog">
-          <img src="imagens/tours/EstocolmoSueciaTour.jpg" alt="" loading="lazy">
-          <div class="roteiro-card-veu"></div>
-          <div class="roteiro-card-texto">
-            <span class="roteiro-local">Suécia</span>
-            <h3>Estocolmo</h3>
-            <span class="roteiro-abrir">Ver roteiro</span>
-          </div>
-        </button>
-
-        <button class="roteiro-card" data-roteiro="paris" aria-haspopup="dialog">
-          <img src="imagens/tours/ParisFrancaTour.jpg" alt="" loading="lazy">
-          <div class="roteiro-card-veu"></div>
-          <div class="roteiro-card-texto">
-            <span class="roteiro-local">França</span>
-            <h3>Paris</h3>
-            <span class="roteiro-abrir">Ver roteiro</span>
-          </div>
-        </button>
-
-        <button class="roteiro-card" data-roteiro="rio" aria-haspopup="dialog">
-          <img src="imagens/tours/RioBrasilTour.jpg" alt="" loading="lazy">
-          <div class="roteiro-card-veu"></div>
-          <div class="roteiro-card-texto">
-            <span class="roteiro-local">Brasil</span>
-            <h3>Rio de Janeiro</h3>
-            <span class="roteiro-abrir">Ver roteiro</span>
-          </div>
-        </button>
-
-      </div>
+      <!-- Card Fan Carousel: os quatro roteiros em leque, montado pelo card-fan-carousel.js -->
+      <div class="roteiros-leque" id="roteiros-leque"></div>
     </section>
 
     <!-- Avaliações -->
@@ -323,6 +282,8 @@
     <div class="lightbox-conteudo" id="lightbox-conteudo"></div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha384-XmJ9SoHtVOHoQUcKvFAzVXwdkKo1Ie3bhmSoIAkcdsHGaIrVJIkmozyq0FJeb/Ly" crossorigin="anonymous"></script>
+  <script src="card-fan-carousel.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
